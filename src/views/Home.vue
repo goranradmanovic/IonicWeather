@@ -2,12 +2,12 @@
   //- Every page needs to be wrapped with ion-page div and class
   .ion-page
     //- Page header (toolbar)
-    ion-header
-      ion-toolbar(color='medium')
-        ion-title Current Weather Info
+    ion-header(translucent)
+      ion-toolbar(color='light')
+        ion-title Current Weather
 
     //- Place for main content
-    ion-content.ion-padding
+    ion-content(fullscreen padding)
 
       //- Including/using components
       WeatherSearch(v-on:get-city='getCityWeatherInfo')
@@ -51,7 +51,8 @@
         //Get JSON data
         this.info = await response.json(); //Return an promise
 
-        console.log(this.info)
+        console.log('Info data ', this.info)
+        console.log('Info data ', this.info.cod)
       },
 
       // Clear weather info data from UI
@@ -63,7 +64,8 @@
       showAlert(message) {
         return this.$ionic.alertController.create({
                                             header: 'Not Valid City Name',
-                                            message: `Please enter a valid city name. City ${message}!`,
+                                            message: `Please enter a valid city name.
+                                                      City ${message}!`,
                                             buttons: ['Ok']
                                           }).then(a => a.present() /*present method set off alert*/);
       }
