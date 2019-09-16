@@ -1,5 +1,6 @@
 <template lang="pug">
-  ion-button(color='light' expand='block' v-if='info' @click='$emit("clear-info")') Clear
+    ion-button(color='danger' expand='block' v-if='info && info.cod != 404' @click='$emit("clear-info")') Clear
+      ion-icon(name='close-circle-outline' slot='end')
 </template>
 
 <script>

@@ -2,12 +2,16 @@
   ion-grid
     form(@submit.prevent='onSubmit()')
       ion-col
+        h3 City Name
+        ion-searchbar(animated name='city' :value='city' @input='setCurrentCity($event.target.value)' placeholder='Enter city name' cancel-button-icon required)
+
+      //-ion-col
         ion-item
           ion-label(position='stacked') City Name
           ion-input(name='city' :value='city' @input='setCurrentCity($event.target.value)' placeholder='Enter city name' clear-input required)
 
       ion-col
-        ion-button(type='submit' color='secondary' expand='block') Search
+        ion-button(type='submit' color='secondary' expand='block' class='search-btn') Search
           ion-icon(slot='end' name='search')
           ion-ripple-effect
 </template>
@@ -56,5 +60,5 @@
       }
     }
   }
-  
+
 </script>
