@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.ionicweather",
+  "appName": "ionic-weather",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist"
+}
