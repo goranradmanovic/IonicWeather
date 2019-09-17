@@ -7,11 +7,11 @@
 
     ion-card-content
       ion-row
-        ion-col
+        ion-col(size='5')
           h1.ion-text-center {{ info.weather[0].main }}
           img.card-img(:src='getWeatherIconPath()' alt='Weather info icon' title='info.weather[0].description')
 
-        ion-col
+        ion-col(size='7')
           ion-item(lines='none')
             .weather__info
               h1 {{ roundNumber(info.main.temp) }}°
@@ -32,7 +32,7 @@
 
               p
                 small Wind &nbsp;
-                | {{ info.wind.speed }} KM/H &nbsp; {{ getWindDirection(info.wind.deg) }}
+                | {{ info.wind.speed }} KM/H {{ getWindDirection(info.wind.deg) }}
 </template>
 
 <script>
