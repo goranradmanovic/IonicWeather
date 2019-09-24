@@ -50,9 +50,6 @@
 
         //Get JSON data
         this.info = await response.json(); //Return an promise
-
-        console.log('Info data ', this.info)
-        console.log('Info data ', this.info.cod)
       },
 
       // Clear weather info data from UI
