@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.4394f802d2e4798bf36d52f6e9db3d2a.js"
+  "/precache-manifest.042a93909f8e30c0f8d8eda38f945e3d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ionic-weather"});
