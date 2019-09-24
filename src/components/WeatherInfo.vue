@@ -9,7 +9,7 @@
       ion-row
         ion-col(size='5')
           h1.ion-text-center {{ info.weather[0].main }}
-          img.card-img(:src='getWeatherIconPath()' alt='Weather info icon' title='info.weather[0].description')
+          img.card-img(:src='getWeatherIconPath()' :alt='getWeatherIconPath()' title='info.weather[0].description')
 
         ion-col(size='7')
           ion-item(lines='none')
@@ -43,7 +43,7 @@
     methods: {
 
       getWeatherIconPath() {
-        return `http://openweathermap.org/img/wn/${this.info.weather[0].icon}@2x.png`
+        return require('../assets/images/weathericons/' + this.info.weather[0].icon + '.png');
       },
 
       getDate() {
@@ -63,8 +63,7 @@
         let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
         return (deg) ? compassSector[(deg / 22.5).toFixed(0) - 1] : '';
       }
-
-    }
+    },
   }
 
 </script>
