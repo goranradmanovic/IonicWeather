@@ -2,7 +2,7 @@
   ion-grid
     form(@submit.prevent='onSubmit()')
       ion-col
-        h3 City Name
+        h3.mt-3 City Name
         ion-searchbar(animated name='city' :value='city' @input='setCurrentCity($event.target.value)' placeholder='Enter city name' cancel-button-icon required)
 
       //-ion-col
